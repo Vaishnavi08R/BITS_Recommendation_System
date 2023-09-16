@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1uyUCOJxutgWL2RiXie1RjDiNozQurSQg
 """
 
-from pickle8 import pickle
+from pickle5 import pickle
 import streamlit as st
 import requests
 import pandas as pd
@@ -48,14 +48,13 @@ selected_movie = st.selectbox(
 
 if st.button('Show Recommendation'):
     recommended_movie_names,recommended_movie_posters = recommend(selected_movie)
-    col1, col2, col3, col4, col5,col6,col7 = st.columns(8)
+    col1, col2, col3, col4, col5,col6,col7 = st.columns(7)
     with col1:
         st.text(recommended_movie_names[0])
         st.image(recommended_movie_posters[0])
     with col2:
         st.text(recommended_movie_names[1])
         st.image(recommended_movie_posters[1])
-
     with col3:
         st.text(recommended_movie_names[2])
         st.image(recommended_movie_posters[2])
